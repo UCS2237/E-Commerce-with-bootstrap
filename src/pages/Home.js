@@ -192,7 +192,7 @@ function Home() {
                 <div className="product-card h-100">
                   <Link to={`/product/${p.id}`}>
   <img
-    src={p.image_url}
+    src={p.image_base64}
     alt={p.name}
     className="img-fluid mb-3"
     style={{ cursor: 'pointer' }}
