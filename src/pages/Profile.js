@@ -11,7 +11,7 @@ const Profile = () => {
     if (!token) return;
 
     axios
-      .get('http://localhost:5000/api/auth/profile', {
+      .get('http://16.171.166.44:5000/api/auth/profile', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setUser(res.data))
@@ -71,6 +71,9 @@ const Profile = () => {
     localStorage.clear();
     navigate('/');
   };
+  const home = () => {
+    navigate('/home');
+  };
 
   if (!user) {
     return (
@@ -108,6 +111,11 @@ const Profile = () => {
               <div className="d-grid mt-4">
                 <button className="btn btn-logout text-white" onClick={logout}>
                   Logout
+                </button>
+                </div>
+                <div className="d-grid mt-4">
+                <button className="btn btn-logout text-white" onClick={home}>
+                  Home
                 </button>
               </div>
             </div>

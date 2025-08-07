@@ -34,14 +34,14 @@ const Cart = () => {
     }
 
     axios
-      .get(`http://localhost:5000/api/cart/${user.id}`)
+      .get(`http://16.171.166.44:5000/api/cart/${user.id}`)
       .then((res) => setCartItems(res.data))
       .catch(() => setCartItems([]));
   }, [navigate, user]);
 
   const removeItem = async (productId) => {
     try {
-      await axios.delete('http://localhost:5000/api/cart/remove', {
+      await axios.delete('http://16.171.166.44:5000/api/cart/remove', {
         data: { user_id: user.id, product_id: productId },
       });
       setCartItems((prev) =>
@@ -62,7 +62,7 @@ const Cart = () => {
     if (newQuantity > item.stock_quantity) return alert('Not enough stock');
 
     try {
-      await axios.put('http://localhost:5000/api/cart/update', {
+      await axios.put('http://16.171.166.44:5000/api/cart/update', {
         user_id: user.id,
         product_id: productId,
         quantity: newQuantity,

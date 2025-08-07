@@ -15,7 +15,7 @@ const Wishlist = () => {
     }
 
     axios
-      .get(`http://localhost:5000/api/wishlist/${user.id}`, {
+      .get(`http://16.171.166.44:5000/api/wishlist/${user.id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -26,7 +26,7 @@ const Wishlist = () => {
 
   const removeFromWishlist = async (productId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/wishlist/remove`, {
+      await axios.delete(`http://16.171.166.44:5000/api/wishlist/remove`, {
         data: { user_id: user.id, product_id: productId },
       });
       setWishlistItems((prev) =>

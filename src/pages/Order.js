@@ -10,7 +10,7 @@ const Order = () => {
 
     (async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/order/orders/${user.id}`);
+        const res = await axios.get(`http://16.171.166.44:5000/api/order/orders/${user.id}`);
         setOrders(res.data);
       } catch (err) {
         console.error('Error fetching orders:', err);

@@ -39,7 +39,7 @@ const Register = () => {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/register', form);
+      await axios.post('http://16.171.166.44:5000/api/auth/register', form);
       alert('Registration successful! Please login.');
       navigate('/');
     } catch (err) {
