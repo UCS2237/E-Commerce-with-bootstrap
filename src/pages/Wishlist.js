@@ -60,8 +60,6 @@ const Wishlist = () => {
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{item.name}</h5>
                     <p className="card-text mb-1"><strong>Price:</strong> ₹{item.price}</p>
-                    <p className="card-text mb-1"><strong>Quality:</strong> {item.quality}</p>
-                    <p className="card-text mb-1"><strong>Quantity:</strong> {item.quantity}</p>
                     <p className="card-text mb-2" style={{ flexGrow: 1 }}>{item.description}</p>
                     <p className="card-text mb-3"><small className="text-muted">{item.delivery_option}</small></p>
                     <button
