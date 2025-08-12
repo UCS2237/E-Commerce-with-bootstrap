@@ -39,7 +39,7 @@ const RazorpayPayment = () => {
     }
 
     try {
-      const result = await axios.post('http://create-order', {
+      const result = await axios.post('http://16.171.166.44:5000/create-order', {
         amount: totalAmount * 100,
       });
 
